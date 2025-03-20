@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <title>helpppets</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../Styles/indexstyles.css">
+        <link href="../../Images/">
+        <link href="../../DogImg/cuadrado512PX">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+          .container {
+            margin: 30px auto;
+            width: fit-content;
+          }
+          
+          /* Estructura principal del carrusel */
+          .custom-carousel {
+            position: relative;
+            width: fit-content;
+            margin: 0 auto;
+          }
+          
+          /* Contenedor de imágenes */
+          .custom-carousel-inner {
+            position: relative;
+            width: 512px; /* Ancho fijo igual al de tus imágenes */
+            height: 512px; /* Alto fijo igual al de tus imágenes */
+          }
+          
+          /* Estilo para cada slide */
+          .custom-carousel-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+          }
+          
+          .custom-carousel-item.active {
+            opacity: 1;
+          }
+          
+          /* Imágenes dentro del carrusel */
+          .custom-carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+          
+          /* Controles del carrusel (botones prev/next) */
+          .custom-carousel-controls {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            pointer-events: none; /* Para que no interfiera con los clics */
+          }
+          
+          /* Botones de navegación */
+          .custom-carousel-control {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin: 0 10px;
+            pointer-events: auto; /* Para que reciba los clics */
+          }
+          
+          /* Indicadores */
+          .custom-carousel-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            z-index: 10;
+          }
+          
+          .custom-carousel-indicator {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+          }
+          
+          .custom-carousel-indicator.active {
+            background-color: white;
+          }
+        </style>
+      </head>
+
+      <body>
+
+        <nav class="navbar navbar-expand-sm bg-black">
+            <div class="container-fluid">
+    
+              <a class="navbar-brand" href="Index.html">
+                <img src="#" alt="">
+              </a>
+    
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+    
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+    
+                  <li class="nav-item dropdown">
+    
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <img src="../../images/menu.png" alt="">
+                    </a>
+    
+                    <ul class="dropdown-menu text-right">
+                      <li><a class="dropdown-item" href="../../Index.html">Inicio</a></li>
+                      <li><a class="dropdown-item" href="../../3Productos.html">Productos</a></li>
+                      <li><a class="dropdown-item" href="../../4Adopta.html">Adopta</a></li>
+                      <li><a class="dropdown-item" href="../../5Contacto.html">Conctato</a></li>
+                    </ul>
+    
+                  </li>
+    
+                </ul>
+              </div>
+    
+              <a class="navbar-brand" href="https://www.tiktok.com/@helpppets?lang=es">
+                <img src="../../images/tik-tok.png" alt="#">
+              </a>
+              <a class="navbar-brand" href="https://www.instagram.com/helpppets/">
+                <img src="../../images/instagram.png" alt="#">
+              </a>
+    
+            </div>
+          </nav>
+    
+        <header class="container-fluid p-5 bg-red text-black text-center" style="color: red;">
+    
+            <h1>HELPPPETS</h1>
+            <p><strong>¡ADOPTA A X!</strong></p>
+    
+        </header>
+
+        <div class="container" style="margin-top: 20px;margin-left: 20px; margin-bottom: 20px;">
+          <div id="customCarousel" class="custom-carousel">
+            <!-- Contenedor de slides -->
+            <div class="custom-carousel-inner">
+              <div class="custom-carousel-item active">
+                <img src="DogImg/cuadrado512PX.png" alt="Imagen 1">
+              </div>
+              <div class="custom-carousel-item">
+                <img src="DogImg/cuadrado512PX.png" alt="Imagen 2">
+              </div>
+              <div class="custom-carousel-item">
+                <img src="DogImg/cuadrado512PX.png" alt="Imagen 3">
+              </div>
+            </div>
+            
+            <!-- Controles -->
+            <div class="custom-carousel-controls">
+              <button class="custom-carousel-control prev-btn">
+                <span>&lt;</span>
+              </button>
+              <button class="custom-carousel-control next-btn">
+                <span>&gt;</span>
+              </button>
+            </div>
+            
+            <!-- Indicadores -->
+            <div class="custom-carousel-indicators">
+              <button class="custom-carousel-indicator active" data-slide="0"></button>
+              <button class="custom-carousel-indicator" data-slide="1"></button>
+              <button class="custom-carousel-indicator" data-slide="2"></button>
+            </div>
+          </div>
+        </div>
+      
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            // Elementos del carrusel
+            const carousel = document.getElementById('customCarousel');
+            const slides = carousel.querySelectorAll('.custom-carousel-item');
+            const prevBtn = carousel.querySelector('.prev-btn');
+            const nextBtn = carousel.querySelector('.next-btn');
+            const indicators = carousel.querySelectorAll('.custom-carousel-indicator');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // Función para mostrar un slide específico
+            function showSlide(index) {
+              // Ocultar todos los slides
+              slides.forEach(slide => {
+                slide.classList.remove('active');
+              });
+              
+              // Desactivar todos los indicadores
+              indicators.forEach(indicator => {
+                indicator.classList.remove('active');
+              });
+              
+              // Mostrar el slide actual
+              currentSlide = (index + totalSlides) % totalSlides;
+              slides[currentSlide].classList.add('active');
+              indicators[currentSlide].classList.add('active');
+            }
+            
+            // Evento para el botón anterior
+            prevBtn.addEventListener('click', () => {
+              showSlide(currentSlide - 1);
+            });
+            
+            // Evento para el botón siguiente
+            nextBtn.addEventListener('click', () => {
+              showSlide(currentSlide + 1);
+            });
+            
+            // Eventos para los indicadores
+            indicators.forEach((indicator, index) => {
+              indicator.addEventListener('click', () => {
+                showSlide(index);
+              });
+            });
+            
+            // Iniciar el carrusel
+            showSlide(0);
+          });
+        </script>
+
+</body>
+
+</html>
